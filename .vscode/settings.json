@@ -1,0 +1,6 @@
+{
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.enabled": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.suggestOnTriggerCharacters": true
+}
