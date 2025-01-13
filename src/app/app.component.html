@@ -1,4 +1,16 @@
-<button (click)="getData()">Get Data</button>
-<p *ngIf="responseData">Response: {{ responseData | json }}</p>
+<div class="news-container">
+  <div *ngFor="let item of newsItems" class="news-item">
+    <div
+      class="category"
+      [style.background-color]="getCategoryColor(item.category)"
+    >
+      {{ item.category }}
+    </div>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+    <div class="timestamp">{{ getTimeElapsed(item.timestamp) }}</div>
+  </div>
+</div>
 
-<router-outlet />
+<!-- Add this to verify if the component is rendering -->
+<div *ngIf="newsItems.length === 0">No news items available</div>
